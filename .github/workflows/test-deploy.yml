@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TAG: ${{ github.sha }}
-      DOCKER_BUILDKIT: 0 # Docker Buildxを無効化
+      DOCKER_BUILDKIT: 0
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v2
