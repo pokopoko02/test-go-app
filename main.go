@@ -4,8 +4,9 @@ import (
 	"log"
 	"net/http"
 )
+
 func RootHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hello world! Welcome Go App!")
+	fmt.Fprint(w, "Hello world!")
 }
 func HealthCheck(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "ok")
