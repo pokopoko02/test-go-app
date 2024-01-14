@@ -10,6 +10,6 @@ FROM alpine as prd
 WORKDIR /app
 COPY --from=build /build/test-go-app .
 RUN addgroup go \
-&& adduser -D -G go go \
-&& chown -R go:go /app/test-go-app
-CMD ["./test-go-app"]ls
+    && adduser -D -G go go \
+    && chown -R go:go /app/test-go-app
+CMD ["./test-go-app"]
